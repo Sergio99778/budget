@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+//Components
 import Question from './components/Question';
+import Form from './components/Form';
 
 function App() {
   //Budget quantity
@@ -11,6 +13,12 @@ function App() {
         <h1>Budget</h1>
         <div className="contenido-principal contenido">
           <Question setBudget={setBudget} setLeftBudget={setLeftBudget} />
+          <div className="row">
+            <div className="one-half column">
+              <Form />
+            </div>
+            <div className="one-half column">2</div>
+          </div>
         </div>
       </header>
     </div>
