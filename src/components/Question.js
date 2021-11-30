@@ -3,7 +3,7 @@ import React, { Fragment, useState } from 'react';
 //Components
 import Error from './Error';
 
-const Question = ({ setBudget, setLeftBudget }) => {
+const Question = ({ setBudget, setLeftBudget, setShowQuestion }) => {
   //Quantity
   const [quantity, setQuantity] = useState(0);
   //Error
@@ -26,6 +26,7 @@ const Question = ({ setBudget, setLeftBudget }) => {
       setError(false);
       setBudget(quantity);
       setLeftBudget(quantity);
+      setShowQuestion(false);
     }
   };
 
