@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 //Components
 import Question from './components/Question';
 import Form from './components/Form';
+import List from './components/List';
 
 function App() {
   //Budget quantities
@@ -27,7 +28,9 @@ function App() {
               <div className="one-half column">
                 <Form addNewExpense={addNewExpense} />
               </div>
-              <div className="one-half column">2</div>
+              <div className="one-half column">
+                <List expenses={expenses} />
+              </div>
             </div>
           )}
         </div>
