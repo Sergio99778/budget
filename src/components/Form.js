@@ -3,6 +3,7 @@ import shortid from 'shortid';
 
 //Components
 import Error from './Error';
+import PropTypes from 'prop-types';
 
 const Form = ({ setExpense, setCreateExpense }) => {
   //Form state
@@ -62,6 +63,11 @@ const Form = ({ setExpense, setCreateExpense }) => {
       </button>
     </form>
   );
+};
+
+Form.propTypes = {
+  setExpense: PropTypes.func.isRequired,
+  setCreateExpense: PropTypes.func.isRequired,
 };
 
 export default Form;
