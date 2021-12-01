@@ -4,7 +4,7 @@ import shortid from 'shortid';
 //Components
 import Error from './Error';
 
-const Form = ({ addNewExpense }) => {
+const Form = ({ setExpense, setCreateExpense }) => {
   //Form state
   const [name, setName] = useState('');
   const [quantity, setQuantity] = useState(0);
@@ -26,7 +26,8 @@ const Form = ({ addNewExpense }) => {
         id: shortid.generate(),
       };
       //Adding new expense
-      addNewExpense(expense);
+      setExpense(expense);
+      setCreateExpense(true);
       //Reset form
       setName('');
       setQuantity(0);
